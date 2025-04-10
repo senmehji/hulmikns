@@ -17,4 +17,5 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt update -y && sudo apt install ufw libcurl4-openssl-dev libssl-dev libjansson-dev socat coreutils ca-certificates gnupg2 -y
+        sudo apt update -y
+        sudo apt install ufw -y
