@@ -1,0 +1,20 @@
+name: Ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt update -y && sudo apt install ufw libcurl4-openssl-dev libssl-dev libjansson-dev socat coreutils ca-certificates gnupg2 -y
